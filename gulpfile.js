@@ -18,7 +18,7 @@ function browsersync() {
 
 function styles() {
   return src('app/scss/style.scss')
-    .pipe(scss({outputStyles: 'compressed'}))
+    .pipe(scss({ outputStyles: 'compressed'}))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist:['last 10 versions'],
@@ -69,7 +69,7 @@ function cleanDist() {
 }
 
 function watching() {
-  watch(['app/scss/**/*/.scss'], styles);
+  watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
   watch(['app/**/*.html']).on('change', browserSync.reload)
 }
