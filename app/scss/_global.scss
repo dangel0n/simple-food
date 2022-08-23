@@ -1,10 +1,21 @@
+html,
+body{
+  height: 100%;
+}
 body{
   font-size: 20px;
   line-height: 130%;
   background-color: #fff;
   color: $default-color;
-  @extend %quicksand-400;
+  @extend %rubik-400;
+  display: flex;
+  flex-direction: column;
 }
+
+.main{
+ flex-grow: 1;
+}
+
 .container{
   max-width: 1200px;
   margin: 0 auto;
