@@ -1,0 +1,91 @@
+.hero {
+  margin-top: 164px;
+
+  &__inner {
+    background-repeat: no-repeat;
+    background-size: 560px 660px;
+    background-position: center right;
+    display: flex;
+    align-items: center;
+    height: 660px;
+  }
+
+  &__content {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 66px;
+    color: $dark;
+    line-height: 130%;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__span {
+    color: $orange-900;
+  }
+
+  &__text p {
+    line-height: 150%;
+    margin-bottom: 20px;
+  }
+
+  &__order {
+    padding: 13px 32px;
+    margin-right: 35px;
+    outline: transparent;
+    border: solid 1px transparent;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 18px;
+
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+      color: $orange-900;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2), 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+      color: $orange-900;
+    }
+
+    &:active {
+      background: rgba(255, 122, 80, 0.1);
+      border-radius: 5px;
+      box-shadow: 0px 5px 12px transparent;
+    }
+  }
+
+  &__more {
+    text-decoration: underline;
+    color: $darkblue-900;
+    outline: transparent;
+    transition: all 0.3s;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+      text-decoration: transparent;
+    }
+
+    &:hover {
+      color: $orange-900;
+      text-decoration: none;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+      box-shadow: 0px 0px 0px 2px transparent;
+      text-decoration: none;
+    }
+  }
+}
