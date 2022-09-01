@@ -1,13 +1,15 @@
 html,
-body{
+body {
   height: 100%;
 }
-body{
+
+body {
   font-size: 20px;
   line-height: 130%;
-  background-color: #F9FAFF;
-  color: $default-color;
-  @extend %rubik-400;
+  background-color: $silver-100;
+  color: $darkblue-900;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
 }
@@ -23,26 +25,33 @@ body{
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  }
-
-.main{
- flex-grow: 1;
 }
 
-.container{
+.main {
+  flex-grow: 1;
+}
+
+.container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.section{
+.section {
   margin-bottom: 120px;
 }
 
-.title{
-  @extend %rubik-500;
+.title {
+  font-weight: 500;
   font-size: 36px;
-  color: $title-color;
+  color: $darkblue-900;
   text-align: center;
+  line-height: 130%;
+}
+
+.btn {
+  background-color: $orange-900;
+  border-radius: 5px;
+  color: #fff;
 }

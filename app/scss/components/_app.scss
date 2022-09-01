@@ -1,0 +1,55 @@
+.app {
+  &__inner {
+    background-repeat: no-repeat;
+    background-size: 570px 380px;
+    background-position: center right;
+    height: 380px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 540px;
+    padding: 40px 0;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 45px;
+  }
+
+  &__text p {
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    margin-right: 30px;
+    display: inline-block;
+    height: 40px;
+    width: 120px;
+
+    &:last-child {
+      margin-right: 0;
+      width: 135px;
+    }
+  }
+
+  &__link::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 40px;
+  }
+}
+
+.apple::before {
+  background-image: url(.././images/pictures/apple.jpg);
+  width: 120px;
+}
+
+.google::before {
+  background-image: url(.././images/pictures/google.jpg);
+  width: 135px;
+}

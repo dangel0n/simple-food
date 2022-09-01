@@ -1,55 +1,9 @@
-$orange: #FF6838;
-$default-color: #31352B;
-$title-color: #363853;
-$silver: #ECECEC;
+$orange-900: #FF6838;
+$dark: #31352B;
+$darkblue-900: #363853;
+$silver-200: #ECECEC;
 $gray: #C2C2C2;
-$body-color: #F9FAFF;
+$silver-100: #F9FAFF;
 
 
 
-
-%rubik-300{
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
-}
-
-%rubik-500 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-}
-
-%rubik-400 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-}
-
-%bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-%btn{
-  background-color: $orange;
-  border-radius: 5px;
-  color: #fff;
-}
-
-%focus-first{
-  background-color: rgba(255, 122, 80, 0.1);
-  box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-  border-radius: 5px; 
-}
-
-%focus-second{
-  background-color: rgba(255, 255, 255, 0.01);
-box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-border-radius: 5px;
-}
-
-%active-text{
-  text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-  text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    box-shadow: 0px 0px 0px 2px transparent;
-    border: transparent;
-}
