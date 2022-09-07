@@ -40,6 +40,18 @@ body {
 
 .section {
   margin-bottom: 120px;
+
+  @media (max-width: $md) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $lg) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $sm) {
+    margin-bottom: 40px;
+  }
 }
 
 .title {
@@ -48,6 +60,14 @@ body {
   color: $darkblue-900;
   text-align: center;
   line-height: 130%;
+
+  @media (max-width: $md) {
+    font-size: 30px;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 24px;
+  }
 }
 
 .btn {

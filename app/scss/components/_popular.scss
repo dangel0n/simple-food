@@ -2,18 +2,43 @@
   &__title {
     margin-bottom: 60px;
     line-height: 130%;
+
+    @media (max-width: $sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__filter {
     display: flex;
     margin-bottom: 45px;
+    padding: 1px 1px;
+
+    @media (max-width: $lg) {
+      overflow-x: scroll;
+    }
+
+    @media (max-width: $sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    margin-right: 20px;
+
+    @media (max-width: $md) {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 20px;
+    white-space: nowrap;
     box-shadow: 0px 0px 0px 1px $silver-200;
     border-radius: 5px;
     padding: 13px 33px;
@@ -23,9 +48,24 @@
     outline: transparent;
     transition: 0.3s;
 
+    @media (max-width: $xl) {
+      padding: 13px 25px;
+      font-size: 16px;
+    }
+
+    @media (max-width: $md) {
+      padding: 11px 16px;
+      font-size: 14px;
+    }
+
     svg {
       margin-right: 10px;
       transition: 0.3s;
+
+      @media (max-width: $md) {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &:focus {
@@ -58,6 +98,13 @@
       box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
       border-radius: 5px;
     }
+
+    svg {
+      @media (max-width: $lg) {
+        width: 34px;
+        height: 34px;
+      }
+    }
   }
 
   &__catalog {
@@ -66,6 +113,16 @@
     grid-template-rows: 300px 300px;
     grid-gap: 30px;
     margin-bottom: 60px;
+
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px;
+      margin-bottom: 30px;
+    }
   }
 
   &__more {

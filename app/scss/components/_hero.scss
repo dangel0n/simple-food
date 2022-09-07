@@ -1,6 +1,10 @@
 .hero {
   margin-top: 164px;
 
+  @media (max-width: $md) {
+    margin-top: 96px;
+  }
+
   &__inner {
     background-repeat: no-repeat;
     background-size: 560px 660px;
@@ -8,6 +12,15 @@
     display: flex;
     align-items: center;
     height: 660px;
+
+    @media (max-width: $lg) {
+      background-size: 400px 500px;
+    }
+
+    @media (max-width: $sm) {
+      height: 300px;
+      background-size: 250px 300px;
+    }
   }
 
   &__content {
@@ -15,6 +28,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: $md) {
+      background-color: rgba(249, 250, 255, 0.85);
+      max-width: none;
+      height: 100%;
+      justify-content: center;
+    }
+
+
+    @media (max-width: $sm) {
+      background-color: rgba(249, 250, 255, 0.85);
+      max-width: none;
+      height: 100%;
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -24,6 +52,16 @@
     line-height: 130%;
     margin-bottom: 20px;
     text-transform: uppercase;
+
+    @media (max-width: $lg) {
+      font-size: 55px;
+      max-width: 380px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 40px;
+      max-width: 270px;
+    }
   }
 
   &__span {
@@ -33,6 +71,14 @@
   &__text p {
     line-height: 150%;
     margin-bottom: 20px;
+
+    @media (max-width: $lg) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
   }
 
   &__order {
@@ -43,6 +89,12 @@
     transition: 0.3s;
     cursor: pointer;
     font-size: 18px;
+
+    @media (max-width: $sm) {
+      padding: 8px 24px;
+      font-size: 14px;
+      margin-right: 30px;
+    }
 
     &:focus {
       background-color: rgba(255, 122, 80, 0.1);
@@ -70,6 +122,11 @@
     color: $darkblue-900;
     outline: transparent;
     transition: all 0.3s;
+
+    @media (max-width: $sm) {
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
     &:focus {
       box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);

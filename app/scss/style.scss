@@ -1,4 +1,4 @@
- @use "sass:math"; // не забываем добавить эту строку, чтобы функции math в миксине работали
+ @use "sass:math"; 
 
  @mixin recolor($color: #000) {
    $r: math.div(red($color), 255);
@@ -23,6 +23,14 @@
       </filter>\
     </svg>\
     ##{$svg-filter-id}');
+ }
+
+
+
+ @mixin r($width) {
+   @media (max-width: #{$width}px) {
+     @content;
+   }
  }
 
  @import 'vars';
