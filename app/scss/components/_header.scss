@@ -105,188 +105,188 @@
     &__item:last-child {
       margin-right: 0;
     }
-
-    &__link {
-      outline: transparent;
-      transition: 0.3s;
-      font-size: 18px;
-
-      &:focus {
-        background-color: rgba(255, 255, 255, 0.01);
-        box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-        border-radius: 5px;
-      }
-
-      &:hover {
-        color: $orange-900;
-      }
-
-      &:active {
-        text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-        box-shadow: 0px 0px 0px 2px transparent
-      }
-    }
   }
 
-  .user-nav {
-    display: flex;
+  &__link {
+    outline: transparent;
+    transition: 0.3s;
+    font-size: 18px;
 
-    &__item {
-      transition: 0.3s;
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.01);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
       border-radius: 5px;
-
-      &:first-child {
-        margin-right: 15px;
-      }
-
     }
 
-    &__link {
-      position: relative;
-      border: solid 1px transparent;
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+      box-shadow: 0px 0px 0px 2px transparent;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__item {
+    transition: 0.3s;
+    border-radius: 5px;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+
+  }
+
+  &__link {
+    position: relative;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: transparent;
+    transition: 0.3s;
+    outline: transparent;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 12px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
       border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      outline: transparent;
-      transition: 0.3s;
-      outline: transparent;
-      background-size: 24px 24px;
-      background-repeat: no-repeat;
-      background-position: center;
-      padding: 12px;
+    }
+
+    &:hover {
+      background-color: #FF7A50;
 
       svg {
-        width: 20px;
-        height: 20px;
+        @include recolor(#fff);
       }
 
-      &:focus {
-        background-color: rgba(255, 122, 80, 0.1);
-        box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-        border-radius: 5px;
-      }
-
-      &:hover {
-        background-color: #FF7A50;
-
-        svg {
-          @include recolor(#fff);
-        }
-
-        span {
-          background-color: #fff;
-          color: $orange-900;
-        }
-      }
-
-      &:active {
-        background-color: #FFF2ED;
-        box-shadow: 0px 0px 0px 2px transparent;
-
-        svg {
-          @include recolor($darkblue-900);
-        }
+      span {
+        background-color: #fff;
+        color: $orange-900;
       }
     }
 
-    &__num {
-      position: absolute;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background-color: $orange-900;
-      font-size: 10px;
-      line-height: 12px;
-      color: #fff;
-      top: 8px;
-      right: 3px;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    &:active {
+      background-color: #FFF2ED;
+      box-shadow: 0px 0px 0px 2px transparent;
+
+      svg {
+        @include recolor($darkblue-900);
+      }
     }
   }
 
-  .menu-mob {
+  &__num {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 5;
-    transform: translateX(-200%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $orange-900;
+    font-size: 10px;
+    line-height: 12px;
+    color: #fff;
+    top: 8px;
+    right: 3px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.menu-mob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  transform: translateX(-200%);
+  transition: 0.5s;
+
+  &__active {
+    transform: translateX(0);
     transition: 0.5s;
-
-    &__active {
-      transform: translateX(0);
-      transition: 0.5s;
-    }
-
-    &__logo {
-      width: 200px;
-      height: 40px;
-      margin-left: 15px;
-    }
-
-    &__wraper {
-      width: calc(100% - 55px);
-      background-color: #fff;
-      padding-top: 25px;
-      height: 100vh;
-    }
-
-    &__item {
-      padding-left: 15px;
-      margin-bottom: 20px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    &__list {
-      padding: 25px 0;
-      border-top: 1px solid #EEEFF3;
-      border-bottom: 1px solid #EEEFF3;
-    }
-
-    &__top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    &__btn {
-      position: relative;
-      width: 18px;
-      height: 18px;
-      margin-right: 25px;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        left: 0;
-        transform: rotate(45deg);
-        background-color: $darkblue-900;
-      }
-
-      &::before {
-        transform: rotate(-45deg);
-      }
-    }
   }
 
-  .socials {
+  &__logo {
+    width: 200px;
+    height: 40px;
     margin-left: 15px;
   }
 
-  .contact {
-    margin-left: 15px;
+  &__wraper {
+    width: calc(100% - 55px);
+    background-color: #fff;
+    padding-top: 25px;
+    height: 100vh;
   }
+
+  &__item {
+    padding-left: 15px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    padding: 25px 0;
+    border-top: 1px solid #EEEFF3;
+    border-bottom: 1px solid #EEEFF3;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 25px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      transform: rotate(45deg);
+      background-color: $darkblue-900;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.socials {
+  margin-left: 15px;
+}
+
+.contact {
+  margin-left: 15px;
 }

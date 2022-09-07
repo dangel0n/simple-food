@@ -8,15 +8,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
   }
 
   &__inner {
     display: flex;
     margin-bottom: 60px;
+
     @media (max-width: $xl) {
-        flex-direction: column;
-      }
+      flex-direction: column;
+    }
   }
 
   &__list {
@@ -30,12 +31,14 @@
     @media (max-width: $xl) {
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 20px;
+      order: 3;
     }
-        @media (max-width: $sm) {
-          grid-template-columns: repeat(1, 1fr);
-          grid-gap: 20px 0;
-          margin-bottom: 30px;
-        }
+
+    @media (max-width: $sm) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__subscribe {
@@ -45,6 +48,7 @@
 
     @media (max-width: $xl) {
       margin-bottom: 30px;
+      order: 1;
     }
   }
 
@@ -161,11 +165,15 @@
     @media (max-width: $xl) {
       order: 2;
       margin-left: 0;
+      margin-bottom: 30px;
     }
   }
 }
 
 .contact {
+  @media (max-width: $xl) {
+    margin-left: 0;
+  }
 
   &__item {
     margin-bottom: 15px;
@@ -215,6 +223,10 @@
 .socials {
   display: flex;
 
+  @media (max-width: $xl) {
+    margin-left: 0;
+  }
+
   &__link {
     outline: transparent;
     width: 40px;
@@ -236,6 +248,8 @@
     border: 1px solid transparent;
     border-radius: 50%;
     transition: 0.3s;
+
+
 
     &:hover {
       background-color: $orange-900;

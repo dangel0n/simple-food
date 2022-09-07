@@ -8,12 +8,78 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
-    // @media (max-width: $lg) {
-    //     mql=window.matchMedia(mediaQueryString)
-    //   }
 
+    .slick-dots {
+      display: flex;
+      margin-right: 23px;
+      margin-left: 23px;
+      justify-content: center;
+
+      li {
+        margin-right: 15px;
+        line-height: 0;
+        font-size: 0;
+        width: 15px;
+        height: 15px;
+        background-color: $gray;
+        border: 0 solid transparent;
+        border-radius: 50%;
+        transition: 0.3s;
+
+        button {
+          font-size: 0;
+          transition: 0.3s;
+          width: 15px;
+          height: 15px;
+          border: 2px solid transparent;
+          border: 50%;
+          outline: transparent;
+
+          &:focus {
+            border: 2px solid $orange-900;
+            border-radius: 50%;
+            border: 50%;
+          }
+
+          &:hover {
+            background-color: #FFF2ED;
+            border: solid 2px #FFAE94;
+            border-radius: 50%;
+          }
+
+          &:active {
+            background-color: #FFAE94;
+          }
+        }
+
+        &.slick-active {
+          background-color: $orange-900;
+          border-radius: 50%;
+        }
+      }
+
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: $lg) {
+      display: block;
+    }
+  }
+
+  &__item {
+    
+
+    @media (max-width: $lg) {
+      display: flex !important;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
   }
 }
+
+
 
 .restaurant-card {
   background-color: #FFFFFF;

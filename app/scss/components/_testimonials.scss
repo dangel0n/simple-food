@@ -2,6 +2,32 @@
   max-width: 990px;
   margin: 0 auto 125px;
 
+  &__slider {
+    position: relative;
+
+    .slick-prev,
+    .slick-next {
+
+      @media (max-width: $md) {
+        position: absolute;
+        top: 80px;
+      }
+
+      @media (max-width: $sm) {
+        top: 30px;
+      }
+    }
+
+    .slick-next {
+      right: 55px;
+
+    }
+
+    .slick-prev {
+      left: 55px;
+    }
+  }
+
   &__title {
     margin-bottom: 45px;
   }
@@ -9,10 +35,25 @@
   &__content {
     display: flex !important;
     margin-bottom: 45px;
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__img {
     border-radius: 50%;
+
+    @media (max-width: $md) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (max-width: $sm) {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__figure {
@@ -26,6 +67,14 @@
     max-width: 570px;
     margin-bottom: 30px;
     position: relative;
+
+    @media (max-width: $lg) {
+      font-size: 16px;
+    }
+
+    @media (max-width: $lg) {
+      font-size: 14px;
+    }
 
     &::before {
       background-image: url(.././images/icons/opening-quotes.svg);
@@ -45,6 +94,10 @@
       background-image: url(.././images/icons/closing-quotes.svg);
       bottom: 0;
       right: -50px;
+
+      @media (max-width: $md) {
+        right: -40px;
+      }
     }
   }
 
@@ -54,6 +107,10 @@
     color: $orange-900;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $lg) {
+      font-size: 16px;
+    }
   }
 
   &__span {
@@ -67,95 +124,96 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
 
-    .slick-dots {
-      display: flex;
-      margin-right: 23px;
-      margin-left: 23px;
+  .slick-dots {
+    display: flex;
+    margin-right: 23px;
+    margin-left: 23px;
 
-      li {
-        margin-right: 15px;
-        line-height: 0;
+    li {
+      margin-right: 15px;
+      line-height: 0;
+      font-size: 0;
+      width: 15px;
+      height: 15px;
+      background-color: $gray;
+      border: 0 solid transparent;
+      border-radius: 50%;
+      transition: 0.3s;
+
+
+
+      button {
         font-size: 0;
+        transition: 0.3s;
         width: 15px;
         height: 15px;
-        background-color: $gray;
-        border: 0 solid transparent;
-        border-radius: 50%;
-        transition: 0.3s;
+        border: 2px solid transparent;
+        border: 50%;
+        outline: transparent;
 
-
-
-        button {
-          font-size: 0;
-          transition: 0.3s;
-          width: 15px;
-          height: 15px;
-          border: 2px solid transparent;
+        &:focus {
+          border: 2px solid $orange-900;
+          border-radius: 50%;
           border: 50%;
-          outline: transparent;
-
-          &:focus {
-            border: 2px solid $orange-900;
-            border-radius: 50%;
-            border: 50%;
-          }
-
-          &:hover {
-            background-color: #FFF2ED;
-            border: solid 2px #FFAE94;
-            border-radius: 50%;
-          }
-
-          &:active {
-            background-color: #FFAE94;
-          }
         }
 
-        &.slick-active {
-          background-color: $orange-900;
+        &:hover {
+          background-color: #FFF2ED;
+          border: solid 2px #FFAE94;
           border-radius: 50%;
+        }
+
+        &:active {
+          background-color: #FFAE94;
         }
       }
 
-      li:last-child {
-        margin-right: 0;
+      &.slick-active {
+        background-color: $orange-900;
+        border-radius: 50%;
       }
     }
 
-    .slick-prev {
-      padding: 8px 12px;
-      border: solid 3px $gray;
-      border-radius: 50%;
-      outline: transparent;
-      transition: 0.3s;
+    li:last-child {
+      margin-right: 0;
+    }
+  }
 
-      &:nth-child(2) {
-        order: 3;
+  .slick-prev,
+  .slick-next {
+    padding: 8px 12px;
+    border: solid 3px $gray;
+    border-radius: 50%;
+    outline: transparent;
+    transition: 0.3s;
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.01);
+      border: 3px solid #C2C2C2;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover {
+      background-color: #FFF2ED;
+      border: solid 3px #FFAE94;
+
+      img {
+        @include recolor(#FFAE94);
       }
+    }
 
-      &:focus {
-        background-color: rgba(255, 255, 255, 0.01);
-        border: 3px solid #C2C2C2;
-        box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-      }
+    &:active {
+      background-color: #FFF2ED;
+      box-shadow: 0px 0px 0px 2px transparent;
 
-      &:hover {
-        background-color: #FFF2ED;
-        border: solid 3px #FFAE94;
-
-        img {
-          @include recolor(#FFAE94);
-        }
-      }
-
-      &:active {
-        background-color: #FFF2ED;
-        box-shadow: 0px 0px 0px 2px transparent;
-
-        img {
-          @include recolor($orange-900);
-        }
+      img {
+        @include recolor($orange-900);
       }
     }
   }
