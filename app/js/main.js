@@ -6,8 +6,8 @@ $(function () {
 
     appendArrows: $('.testimonials__item'),
     appendDots: $('.testimonials__item'),
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [{
       breakpoint: 768,
       settings: {
@@ -48,14 +48,6 @@ $(function () {
 
     })
   };
-  // if (window.matchMedia("(min-width: 768px)").matches) {
-
-  // } else {
-  //   $('.testimonials__slider').slick({
-  //     dots: false,
-  //     appendArrows: $('.testimonials__slider'),
-  //   })
-  // };
 
   var mixer = mixitup('.popular__catalog');
 })
