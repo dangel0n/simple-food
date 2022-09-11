@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog / Страница каталога</title>
+  <link rel="icon" href="images/favicon/favicon.svg" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="#">
+          <img class="logo__img" width="200" height="40" src="images/logo.svg" alt="Логотип">
+        </a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Блюда</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class="user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__link search">
+                <svg>
+                  <use xlink:href="images/sprite.svg#search"></use>
+                </svg>
+                <span class="sr-only">Поиск товаров</span>
+              </button>
+            </li>
+            <li class="user-nav__item">
+              <a class="user-nav__link cart" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#cart"></use>
+                </svg>
+                <span class="sr-only">Корзина покупок</span>
+                <span class="user-nav__num">4</span>
+              </a>
+            </li>
+          </ul>
+          <button class="menu__burger">
+            <span></span>
+          </button>
+          <div class="menu-mob">
+            <div class="menu-mob__wraper">
+              <div class="menu-mob__top">
+                <a class="menu-mob__logo" href="#">
+                  <img class="logo__img" width="200" height="40" src="images/logo.svg" alt="Логотип">
+                </a>
+                <button class="menu-mob__btn"></button>
+              </div>
+              <ul class="menu-mob__list">
+                <li class="menu-mob__item">
+                  <a class="menu-mob__link" href="#">Главная</a>
+                </li>
+                <li class="menu-mob__item">
+                  <a class="menu-mob__link" href="#">Блюда</a>
+                </li>
+                <li class="menu-mob__item">
+                  <a class="menu-mob__link" href="#">Контакты</a>
+                </li>
+              </ul>
+              <ul class="contact">
+                <li class="contact__item">
+                  <a class="contact__link location" href="#">
+                    ул. Т.Г.Шевченко, 1
+                  </a>
+                </li>
+                <li class="contact__item">
+                  <a class="contact__link calling" href="tel:+380501112233">
+                    380501112233
+                  </a>
+                </li>
+                <li class="contact__item">
+                  <a class="contact__link message" href="mailto:support@sfood.com">
+                    support@sfood.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="socials">
+                <li class="socials__item">
+                  <a class="socials__link" href="#" style="background-image: url('images/icons/facebook.svg');">
+
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#" style="background-image: url('images/icons/twitter.svg');">
+
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#" style="background-image: url('images/icons/instagram.svg');">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Главная
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Каталог товаров
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog__top">
+          <h2 class="catalog__title title">Каталог продуктов</h2>
+          <div class="catalog-filters">
+            <form class="catalog-filters__form" action="#">
+              <select class="catalog-filters__name select-style">
+                <option value="">По названию</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
+              <select class="catalog-filters__number select-style">
+                <option value="">по 12</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
+            </form>
+          </div>
+        </div>
+        <div class="catalog__inner">
+          <div class="catalog__filters filter">
+            <div class="filter__item filter-offer">
+              <h3 class="filter__title">Предложения</h3>
+              <label class="filter-offer__label">
+                <input class="filter-offer__input" type="checkbox">
+                <span class="filter-offer__checkbox"></span>
+                Со скидкой
+              </label>
+              <label class="filter-offer__label">
+                <input class="filter-offer__input" type="checkbox">
+                <span class="filter-offer__checkbox"></span>
+                Новинка
+              </label>
+              <label class="filter-offer__label">
+                <input class="filter-offer__input" type="checkbox">
+                <span class="filter-offer__checkbox"></span>
+                Хит
+              </label>
+            </div>
+            <div class="filter__item filter-category">
+              <h3 class="filter__title">Категории</h3>
+              <form class="filter-category__form">
+                <label class="filter-category__label">
+                  <input class="filter-category__input" type="radio" name="category">
+                  <span class="filter-category__checkbox">
+                    Пицца
+                  </span>
+                </label>
+                <label class="filter-category__label">
+                  <input class="filter-category__input" type="radio" name="category">
+                  <span class="filter-category__checkbox">
+                    Сендвичи
+                  </span>
+                </label>
+                <label class="filter-category__label">
+                  <input class="filter-category__input" type="radio" name="category">
+                  <span class="filter-category__checkbox">
+                    Азиатская кухня
+                  </span>
+                </label>
+                <label class="filter-category__label">
+                  <input class="filter-category__input" type="radio" name="category">
+                  <span class="filter-category__checkbox">
+                    Сеты
+                  </span>
+                </label>
+                <label class="filter-category__label">
+                  <input class="filter-category__input" type="radio" name="category">
+                  <span class="filter-category__checkbox">
+                    Европейская кухня
+                  </span>
+                </label>
+                <label class="filter-category__label">
+                  <input class="filter-category__input" type="radio" name="category">
+                  <span class="filter-category__checkbox">
+                    Напитки
+                  </span>
+                </label>
+                <label class="filter-category__label">
+                  <input class="filter-category__input" type="radio" name="category">
+                  <span class="filter-category__checkbox">
+                    Алкоголь
+                  </span>
+                </label>
+              </form>
+            </div>
+            <div class="filter__item filter-price">
+              <h3 class="filter__title">Цена</h3>
+              <label class="filter-price__label">
+                <span>
+                  от
+                  <span class="filter-price__span filter-price__from"></span>
+                  $
+                </span>
+                <span>
+                  до
+                  <span class="filter-price__span filter-price__to"></span>
+                  ₴
+                </span>
+              </label>
+              <form class="filter-price__form" action="#">
+                <input class="filter-price__input" type="text" data-min="100" data-max="1000" data-from="100"
+                  data-to="300">
+              </form>
+            </div>
+
+          </div>
+          <div class="catalog__content">
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__subscribe">
+          <a class="  footer__logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="Логотип">
+          </a>
+          <form class="footer__form" action="#">
+            <div class="sr-only">Поле ввода email</div>
+            <label for="mail" class="footer__label">
+              <input class="footer__input" type="email" id="mail" placeholder="Ваш email" required>
+            </label>
+            <button class="footer__btn btn" type="submit">
+              <svg width="16" height="16" fill="#fff">
+                <use xlink:href="images/sprite.svg#subscribe-icon"></use>
+              </svg>
+              Подписаться
+            </button>
+          </form>
+        </div>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__link" href="#">
+              Как это работает
+            </a>
+          </li>
+          <li class="footer__item"><a class="footer__link" href="#">
+              О нас
+            </a>
+          </li>
+          <li class="footer__item"><a class="footer__link" href="#">
+              Скачать приложение
+            </a>
+          </li>
+          <li class="footer__item"><a class="footer__link" href="#">
+              Продукты
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              Новости
+            </a>
+          </li>
+          <li class="footer__item"><a class="footer__link" href="#">
+              Блог
+            </a>
+          </li>
+          <li class="footer__item"><a class="footer__link" href="#">
+              Блюда
+            </a>
+          </li>
+          <li class="footer__item"><a class="footer__link" href="#">
+              Партнеры
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              Что нового?
+            </a>
+          </li>
+          <li class="footer__item"><a class="footer__link" href="#">
+              Меню
+            </a>
+          </li>
+          <li class="footer__item"><a class="footer__link" href="#">
+              ЧаВо
+            </a>
+          </li>
+          <li class="footer__item"><a class="footer__link" href="#">
+              Карта сайта
+            </a>
+          </li>
+        </ul>
+        <div class="footer__wraper">
+          <ul class="contact">
+            <li class="contact__item">
+              <a class="contact__link location" href="#">
+                ул. Т.Г.Шевченко, 1
+              </a>
+            </li>
+            <li class="contact__item">
+              <a class="contact__link calling" href="tel:+380501112233">
+                380501112233
+              </a>
+            </li>
+            <li class="contact__item">
+              <a class="contact__link message" href="mailto:support@sfood.com">
+                support@sfood.com
+              </a>
+            </li>
+          </ul>
+          <ul class="socials">
+            <li class="socials__item">
+              <a class="socials__link" href="#" style="background-image: url('images/icons/facebook.svg');">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#" style="background-image: url('images/icons/twitter.svg');">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#" style="background-image: url('images/icons/instagram.svg');">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      © 2022 Simple Food
+    </div>
+  </footer>
+
+
+
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

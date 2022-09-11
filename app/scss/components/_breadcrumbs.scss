@@ -1,0 +1,36 @@
+.breadcrumbs {
+  margin-top: 166px;
+  background-color: rgba(255, 122, 80, 0.1);
+  margin-bottom: 60px;
+
+  &__list {
+    display: flex;
+    padding: 24px 0;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #505050;
+    margin-right: 17px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(.././images/icons/chevron.svg);
+      width: 5px;
+      height: 10px;
+      top: 3px;
+      right: -11px;
+    }
+
+    &:last-child {
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
