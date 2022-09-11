@@ -1,4 +1,21 @@
 $(function () {
+
+  $(".filter-price__input").ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+
+  });
+
+  $('.select-style').styler();
+
   $('.testimonials__slider').slick({
     dots: true,
     prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow-left.svg" alt=""></button>',
