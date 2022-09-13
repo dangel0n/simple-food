@@ -49,12 +49,13 @@
 
   &__inner {
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 60px;
   }
 
   &__filters {
     max-width: 271px;
     width: 100%;
+    margin-right: 30px;
   }
 
   .irs--flat .irs-line {
@@ -92,8 +93,12 @@
     display: none;
   }
 
-  .irs--flat {
-    margin-bottom: 25px;
+  &__content {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: repeat(3, 300px);
   }
 }
 
@@ -105,7 +110,7 @@
     letter-spacing: 0.03em;
     font-weight: 400;
     padding-bottom: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 
     &::after {
       content: "";
@@ -121,10 +126,14 @@
   &__item {
     background-color: #fff;
     border: 1px solid $silver-200;
-    padding: 0 15px;
     margin-bottom: 30px;
     position: relative;
-    padding: 15px 0 25px 15px;
+    padding: 15px 15px 25px 15px;
+    border-radius: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -168,6 +177,11 @@
     padding-left: 35px;
     display: block;
     margin-bottom: 12px;
+    font-size: 18px;
+
+    &:last-child() {
+      margin-bottom: 0;
+    }
   }
 
   &__checkbox {
@@ -202,4 +216,72 @@
       margin-bottom: 0;
     }
   }
+
+  &__checkbox {
+    font-size: 18px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__arrow {
+    width: 48px;
+    height: 48px;
+    background-color: #FAEDED;
+    display: flex;
+    border-radius: 3px;
+
+    svg {
+      margin: auto;
+      transition: 0.3s;
+    }
+
+    &:active {
+      svg {
+        @include recolor($darkblue-900);
+      }
+    }
+  }
+
+  &__prev {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__next {
+    svg {
+      transform: rotate(270deg);
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin: 0 6px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: #FAEDED;
+    font-size: 18px;
+    border: solid 1px transparent;
+    border-radius: 3px;
+
+    &--active {
+      border: solid 1px $darkblue-900;
+      border-radius: 3px;
+    }
+
+
+  }
+
 }
