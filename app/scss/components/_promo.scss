@@ -1,0 +1,11 @@
+.promo{
+  &__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  &__title{
+    text-align: start;
+    margin-bottom: 60px;
+  }
+}
