@@ -69,8 +69,7 @@
   }
 
   &__item {
-    
-
+  
     @media (max-width: $lg) {
       display: flex !important;
       justify-content: center;
@@ -78,8 +77,6 @@
     }
   }
 }
-
-
 
 .restaurant-card {
   background-color: #FFFFFF;
@@ -161,5 +158,11 @@
       position: absolute;
       left: 0;
     }
+  }
+
+  &__text{
+    padding: 0 20px 15px 20px;
+    font-size: 24px;
+    line-height: 1.3;
   }
 }
