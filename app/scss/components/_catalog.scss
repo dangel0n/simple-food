@@ -16,9 +16,17 @@
     font-family: 'Rubik';
     color: $dark;
     text-shadow: none;
+    transition: all 0.3s;
+
+
 
     &:hover {
-      background: transparent;
+      border: 1px solid $orange-900;
+      color: $orange-900;
+
+      .jq-selectbox__trigger-arrow {
+        @include recolor ($orange-900);
+      }
     }
   }
 
@@ -45,6 +53,7 @@
     border: none;
     background-image: url(.././images/icons/chevron-down.svg);
     background-repeat: no-repeat;
+    transition: all 0.3s;
   }
 
   &__inner {
@@ -178,9 +187,18 @@
     display: block;
     margin-bottom: 12px;
     font-size: 18px;
+    transition: all 0.3s;
 
     &:last-child() {
       margin-bottom: 0;
+    }
+
+    &:hover {
+      color: $orange-900;
+
+      .filter-offer__checkbox {
+        border: 1px solid $orange-900;
+      }
     }
   }
 
@@ -192,6 +210,7 @@
     position: absolute;
     margin-left: -35px;
     border-radius: 3px;
+    transition: border 0.3s;
   }
 }
 
@@ -206,14 +225,24 @@
     &:checked+.filter-category__checkbox {
       color: $orange-900;
     }
+
   }
 
   &__label {
     display: block;
     margin-bottom: 12px;
+    transition: all 0.3s;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:hover {
+      color: $orange-900;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
     }
   }
 
@@ -232,13 +261,32 @@
     background-color: #FAEDED;
     display: flex;
     border-radius: 3px;
+    outline: transparent;
+    transition: all 0.3s;
 
     svg {
       margin: auto;
-      transition: 0.3s;
+      transition: all 0.3s;
+    }
+
+    &:focus {
+      border: solid 1px $orange-900;
+    }
+
+    &:hover {
+      background-color: $orange-900;
+
+      svg {
+        @include recolor(#fff);
+      }
     }
 
     &:active {
+      background-color: #FAEDED;
+      box-shadow: inset 0px -1px 4px 2px rgba(0, 0, 0, 0.15);
+      color: $darkblue-900;
+      border: solid 1px transparent;
+
       svg {
         @include recolor($darkblue-900);
       }
@@ -275,13 +323,29 @@
     font-size: 18px;
     border: solid 1px transparent;
     border-radius: 3px;
+    outline: transparent;
+    transition: all 0.3s;
 
     &--active {
       border: solid 1px $darkblue-900;
       border-radius: 3px;
     }
 
+    &:focus {
+      border: solid 1px $orange-900;
+    }
 
+    &:hover {
+      background-color: $orange-900;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: #FAEDED;
+      box-shadow: inset 0px -1px 4px 2px rgba(0, 0, 0, 0.15);
+      color: $darkblue-900;
+      border: solid 1px transparent;
+    }
   }
 
 }
