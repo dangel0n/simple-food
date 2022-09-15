@@ -5,6 +5,14 @@ $(function () {
     $(this).addClass('pagination__link--active')
   });
 
+  $('.catalog__close-btn').on('click', function () {
+    $('.catalog__wraper').removeClass('catalog__wraper--active');
+  });
+
+  $('.catalog-filters__open').on('click', function () {
+    $('.catalog__wraper').addClass('catalog__wraper--active');
+  })
+
 
   $(".filter-price__input").ionRangeSlider({
     type: "double",
@@ -71,6 +79,17 @@ $(function () {
 
     })
   };
+
+  if (window.matchMedia("(min-width: 1200px)").matches) {
+
+  } else {
+    $('.promo__content').slick({
+      dots: true,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 3000,
+    })
+  }
 
   var mixer = mixitup('.popular__catalog');
 })

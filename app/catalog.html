@@ -61,6 +61,7 @@
           </button>
           <div class="menu-mob">
             <div class="menu-mob__wraper">
+
               <div class="menu-mob__top">
                 <a class="menu-mob__logo" href="#">
                   <img class="logo__img" width="200" height="40" src="images/logo.svg" alt="Логотип">
@@ -139,7 +140,9 @@
       <div class="container">
         <div class="catalog__top">
           <h2 class="catalog__title title">Каталог продуктов</h2>
+
           <div class="catalog-filters">
+            <button class="catalog-filters__open"></button>
             <form class="catalog-filters__form" action="#">
               <select class="catalog-filters__name select-style">
                 <option value="">По названию</option>
@@ -159,94 +162,100 @@
           </div>
         </div>
         <div class="catalog__inner">
-          <ul class="catalog__filters filter">
-            <li class="filter__item filter-category">
-              <h3 class="filter__title">Категории</h3>
-              <form class="filter-category__form">
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="radio" name="category">
-                  <span class="filter-category__checkbox">
-                    Пицца
+          <div class="catalog__wraper">
+            <button class="catalog__close-btn">
+              <span></span>
+              <span></span>
+            </button>
+            <ul class="catalog__filters filter">
+              <li class="filter__item filter-category">
+                <h3 class="filter__title">Категории</h3>
+                <form class="filter-category__form">
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="radio" name="category">
+                    <span class="filter-category__checkbox">
+                      Пицца
+                    </span>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="radio" name="category">
+                    <span class="filter-category__checkbox">
+                      Сендвичи
+                    </span>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="radio" name="category">
+                    <span class="filter-category__checkbox">
+                      Азиатская кухня
+                    </span>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="radio" name="category">
+                    <span class="filter-category__checkbox">
+                      Сеты
+                    </span>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="radio" name="category">
+                    <span class="filter-category__checkbox">
+                      Европейская кухня
+                    </span>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="radio" name="category">
+                    <span class="filter-category__checkbox">
+                      Напитки
+                    </span>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="radio" name="category">
+                    <span class="filter-category__checkbox">
+                      Алкоголь
+                    </span>
+                  </label>
+                </form>
+              </li>
+              <li class="filter__item filter-offer">
+                <h3 class="filter__title">Предложения</h3>
+                <label class="filter-offer__label">
+                  <input class="filter-offer__input" type="checkbox">
+                  <span class="filter-offer__checkbox"></span>
+                  Со скидкой
+                </label>
+                <label class="filter-offer__label">
+                  <input class="filter-offer__input" type="checkbox">
+                  <span class="filter-offer__checkbox"></span>
+                  Новинка
+                </label>
+                <label class="filter-offer__label">
+                  <input class="filter-offer__input" type="checkbox">
+                  <span class="filter-offer__checkbox"></span>
+                  Хит
+                </label>
+              </li>
+              <li class="filter__item filter-price">
+                <h3 class="filter__title">Цена</h3>
+                <label class="filter-price__label">
+                  <span>
+                    от
+                    <span class="filter-price__span filter-price__from"></span>
+                    $
+                  </span>
+                  <span>
+                    до
+                    <span class="filter-price__span filter-price__to"></span>
+                    ₴
                   </span>
                 </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="radio" name="category">
-                  <span class="filter-category__checkbox">
-                    Сендвичи
-                  </span>
-                </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="radio" name="category">
-                  <span class="filter-category__checkbox">
-                    Азиатская кухня
-                  </span>
-                </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="radio" name="category">
-                  <span class="filter-category__checkbox">
-                    Сеты
-                  </span>
-                </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="radio" name="category">
-                  <span class="filter-category__checkbox">
-                    Европейская кухня
-                  </span>
-                </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="radio" name="category">
-                  <span class="filter-category__checkbox">
-                    Напитки
-                  </span>
-                </label>
-                <label class="filter-category__label">
-                  <input class="filter-category__input" type="radio" name="category">
-                  <span class="filter-category__checkbox">
-                    Алкоголь
-                  </span>
-                </label>
-              </form>
-            </li>
-            <li class="filter__item filter-offer">
-              <h3 class="filter__title">Предложения</h3>
-              <label class="filter-offer__label">
-                <input class="filter-offer__input" type="checkbox">
-                <span class="filter-offer__checkbox"></span>
-                Со скидкой
-              </label>
-              <label class="filter-offer__label">
-                <input class="filter-offer__input" type="checkbox">
-                <span class="filter-offer__checkbox"></span>
-                Новинка
-              </label>
-              <label class="filter-offer__label">
-                <input class="filter-offer__input" type="checkbox">
-                <span class="filter-offer__checkbox"></span>
-                Хит
-              </label>
-            </li>
-            <li class="filter__item filter-price">
-              <h3 class="filter__title">Цена</h3>
-              <label class="filter-price__label">
-                <span>
-                  от
-                  <span class="filter-price__span filter-price__from"></span>
-                  $
-                </span>
-                <span>
-                  до
-                  <span class="filter-price__span filter-price__to"></span>
-                  ₴
-                </span>
-              </label>
-              <form class="filter-price__form" action="#">
-                <input class="filter-price__input" type="text" data-min="100" data-max="1000" data-from="100"
-                  data-to="300">
-              </form>
-            </li>
-          </ul>
+                <form class="filter-price__form" action="#">
+                  <input class="filter-price__input" type="text" data-min="100" data-max="1000" data-from="100"
+                    data-to="300">
+                </form>
+              </li>
+            </ul>
+          </div>
           <ul class="catalog__content">
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-1.png" width="140" height="140" alt="Бургер">
@@ -261,7 +270,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-2.png" width="140" height="140" alt="Бургер">
@@ -277,7 +286,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-3.png" width="140" height="140" alt="Бургер">
@@ -293,7 +302,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-4.png" width="140" height="140" alt="Бургер">
@@ -309,7 +318,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-1.png" width="140" height="140" alt="Бургер">
@@ -325,7 +334,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card"><a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-2.png" width="140" height="140" alt="Бургер">
                   <h3 class="food-card__title">
@@ -340,7 +349,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-3.png" width="140" height="140" alt="Бургер">
@@ -356,7 +365,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-4.png" width="140" height="140" alt="Бургер">
@@ -372,7 +381,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-1.png" width="140" height="140" alt="Бургер">
@@ -388,7 +397,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card"><a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-2.png" width="140" height="140" alt="Бургер">
                   <h3 class="food-card__title">
@@ -403,7 +412,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-3.png" width="140" height="140" alt="Бургер">
@@ -419,7 +428,7 @@
                 </button>
               </article>
             </li>
-            <li class="caralog__content-item">
+            <li class="catalog__content-item">
               <article class="food-card">
                 <a href="" class="food-card__link">
                   <img class="food-card__img" src="images/catalog/burger-4.png" width="140" height="140" alt="Бургер">

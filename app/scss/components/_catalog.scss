@@ -4,6 +4,16 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
   }
 
   .jq-selectbox__select {
@@ -17,8 +27,6 @@
     color: $dark;
     text-shadow: none;
     transition: all 0.3s;
-
-
 
     &:hover {
       border: 1px solid $orange-900;
@@ -39,6 +47,35 @@
   }
 
   .catalog-filters {
+    @media (max-width: $lg) {
+      display: flex;
+    }
+
+    &__open {
+      width: 47px;
+      height: 47px;
+      border-radius: 3px;
+      background-color: #FAEDED;
+      position: relative;
+      display: none;
+      margin-right: 10px;
+
+      @media (max-width: $lg) {
+        display: block;
+      }
+
+      &::after {
+        content: "";
+        background-image: url(.././images/icons/filter.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 34px;
+        height: 36px;
+        top: 5px;
+        left: 7px;
+      }
+    }
+
     &__name {
       margin-right: 15px;
     }
@@ -61,10 +98,64 @@
     margin-bottom: 60px;
   }
 
-  &__filters {
-    max-width: 271px;
-    width: 100%;
+  &__wraper {
     margin-right: 30px;
+    transition: all 0.5s;
+
+    @media (max-width: $lg) {
+      transform: translateX(-200%);
+      position: absolute;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.15);
+      position: absolute;
+      width: 100%;
+      background-color: rgba(0, 0, 0, .15);
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    &--active {
+      transform: translateX(0);
+    }
+  }
+
+  &__filters {
+    @media (max-width: $lg) {
+      background-color: #fff;
+      width: 90%;
+      padding-top: 80px;
+    }
+  }
+
+  &__close-btn {
+    background-color: #FAEDED;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after,
+    &::before {
+      content: "";
+      width: 25px;
+      height: 1px;
+      background-color: $darkblue-900;
+      position: absolute;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
   }
 
   .irs--flat .irs-line {
@@ -108,6 +199,26 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     grid-template-rows: repeat(3, 300px);
+
+    @media (max-width: $xl) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 300px);
+    }
+
+    @media (max-width: $sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 300px);
+      grid-gap: 5px;
+    }
+  }
+
+  &__content-item {
+    @media (max-width: $sm) {
+      &:nth-child(n+7) {
+        display: none;
+      }
+    }
+
   }
 }
 
@@ -139,6 +250,7 @@
     position: relative;
     padding: 15px 15px 25px 15px;
     border-radius: 5px;
+    width: 271px;
 
     &:last-child {
       margin-bottom: 0;
@@ -311,6 +423,12 @@
 
   &__item {
     margin: 0 6px;
+
+    @media (max-width: $sm) {
+      &:nth-child(even) {
+        display: none;
+      }
+    }
   }
 
   &__link {
