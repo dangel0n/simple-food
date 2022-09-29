@@ -108,9 +108,8 @@
       width: 100%;
       background-color: rgba(0, 0, 0, 0.15);
       position: absolute;
-      width: 100%;
       background-color: rgba(0, 0, 0, .15);
-      height: 100vh;
+      height: 150%;
       top: 0;
       left: 0;
       z-index: 1000;
@@ -124,8 +123,9 @@
   &__filters {
     @media (max-width: $lg) {
       background-color: #fff;
-      width: 90%;
+      width: calc(100% - 55px);
       padding-top: 80px;
+      height: 100%;
     }
   }
 
@@ -293,10 +293,9 @@
       border: 1px solid $darkblue-900;
     }
   }
-
-  &__label {
-    padding-left: 35px;
+    &__label{
     display: block;
+    padding-left: 34px;
     margin-bottom: 12px;
     font-size: 18px;
     transition: all 0.3s;
@@ -312,7 +311,9 @@
         border: 1px solid $orange-900;
       }
     }
-  }
+ 
+   }
+  
 
   &__checkbox {
     width: 24px;

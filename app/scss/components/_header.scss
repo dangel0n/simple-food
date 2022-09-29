@@ -214,6 +214,7 @@
 }
 
 .menu-mob {
+  
   position: absolute;
   top: 0;
   left: 0;
@@ -222,11 +223,13 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 55;
   transform: translateX(-200%);
-  transition: 0.5s;
+  transition:  0.5s;
+  
 
   &__active {
     transform: translateX(0);
     transition: 0.5s;
+    display: block;
   }
 
   &__logo {

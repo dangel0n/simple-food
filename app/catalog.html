@@ -23,7 +23,7 @@
     <div class="container">
       <div class="header__inner">
         <a class="logo" href="#">
-          <img class="logo__img" width="200" height="40" src="images/logo.svg" alt="Логотип">
+          <img class="logo__img" width="200" height="40" src="images/icons/logo.svg" alt="Логотип">
         </a>
         <nav class="menu">
           <ul class="menu__list">
@@ -64,7 +64,7 @@
 
               <div class="menu-mob__top">
                 <a class="menu-mob__logo" href="#">
-                  <img class="logo__img" width="200" height="40" src="images/logo.svg" alt="Логотип">
+                  <img class="logo__img" width="200" height="40" src="images/icons/logo.svg" alt="Логотип">
                 </a>
                 <button class="menu-mob__btn"></button>
               </div>
@@ -218,7 +218,7 @@
               <li class="filter__item filter-offer">
                 <h3 class="filter__title">Предложения</h3>
                 <label class="filter-offer__label">
-                  <input class="filter-offer__input" type="checkbox">
+                  <input class="filter-offer__input" type="checkbox" >
                   <span class="filter-offer__checkbox"></span>
                   Со скидкой
                 </label>
@@ -235,21 +235,22 @@
               </li>
               <li class="filter__item filter-price">
                 <h3 class="filter__title">Цена</h3>
-                <label class="filter-price__label">
-                  <span>
-                    от
-                    <span class="filter-price__span filter-price__from"></span>
-                    $
-                  </span>
-                  <span>
-                    до
-                    <span class="filter-price__span filter-price__to"></span>
-                    ₴
-                  </span>
-                </label>
                 <form class="filter-price__form" action="#">
+                  <label class="filter-price__label">
+                    <span>
+                      от
+                      <span class="filter-price__span filter-price__from" value="0"></span>
+                      $
+                    </span>
+                    <span>
+                      до
+                      <span class="filter-price__span filter-price__to" value="0"></span>
+                      ₴
+                    </span>
+                  </label>
+
                   <input class="filter-price__input" type="text" data-min="100" data-max="1000" data-from="100"
-                    data-to="300">
+                    data-to="300" value="0">
                 </form>
               </li>
             </ul>
@@ -543,7 +544,7 @@
       <div class="footer__inner">
         <div class="footer__subscribe">
           <a class="  footer__logo" href="#">
-            <img class="logo__img" src="images/logo.svg" alt="Логотип">
+            <img class="logo__img" src="images/icons/logo.svg" alt="Логотип">
           </a>
           <form class="footer__form" action="#">
             <div class="sr-only">Поле ввода email</div>
